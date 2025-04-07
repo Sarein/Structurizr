@@ -1,4 +1,4 @@
-workspace "A minimal approach to software architecture documentation" {
+workspace "Link shorter" {
     !identifiers hierarchical
 
     model {
