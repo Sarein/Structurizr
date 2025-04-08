@@ -1,0 +1,6 @@
+ifndef::imagesdir[:imagesdir: ../images]
+
+[[section-design-decisions]]
+== Architecture Decisions
+
+_Все Architecture Decision Records решения представленыы на отдельной link:../decisions/Сервис%20сокращения%20ссылок[странице]_

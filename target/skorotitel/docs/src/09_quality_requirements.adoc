@@ -1,0 +1,6 @@
+ifndef::imagesdir[:imagesdir: ../images]
+
+[[section-quality-scenarios]]
+== Quality Tree
+
+_Дерево атрибутов описано в https://docs.google.com/spreadsheets/d/1nW1SLHPjARKgHuI9rrKvrPxGDel4yFxqiHfSKq9Riyg/edit?gid=572832533#gid=572832533[Google SpreadSheet]_

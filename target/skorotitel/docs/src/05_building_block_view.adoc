@@ -1,0 +1,41 @@
+ifndef::imagesdir[:imagesdir: ../images]
+
+[[section-building-block-view]]
+
+
+== Building Block View
+
+
+
+=== Whitebox Overall System
+
+
+_**Верхнеуровневая схема сокращателя ссылок**_
+
+image::embed:Containers[]
+
+=== Уровень компонентов системы
+
+==== Сервис сокращения ссылок
+image::embed:API_Components[]
+
+_<Quality/Performance Characteristics>_
+
+
+Для обеспечения высокой скорости работы применяется ScyllaDB, т.к. нам нужна key-value хранилище
+
+_<Open Issues/Problems/Risks>_
+
+
+БД ClickHouse не очень хорошо подходит для маленьких частых записей в неё. Для решение этой проблемы используется kafka
+
+
+==== Ограничение нагрузки на ClickHouse
+
+image::embed:Kafka_Components[]
+
+
+_<Quality/Performance Characteristics>_
+
+
+Kafka настраиватся на прием сообщений от сервиса сокращения ссылок и агрегирует информацию для отправки в ClickHouse информацию "бачами"
