@@ -15,7 +15,7 @@ container skorotitel "Containers" {
     description "Диаграмма C2 для Скоротителя ссылок."
 }
 
-component skorotitel.api "API_Components" {
+component skorotitel.service "API_Components" {
     include *
     autoLayout
     description "Диаграмма C3 для API Скоротителя."
