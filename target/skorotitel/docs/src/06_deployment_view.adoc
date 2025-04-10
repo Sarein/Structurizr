@@ -5,8 +5,4 @@ ifndef::imagesdir[:imagesdir: ../images]
 
 == Deployment View
 
-
-_**Overview Diagram**_
-
-
 image::embed:DevelopmentDeployment[]
