@@ -15,6 +15,12 @@ container skorotitel "Containers" {
     description "Диаграмма C2 для Скоротителя ссылок."
 }
 
+container skorotitel "Kafka" {
+    include *
+    autoLayout
+    description "Диаграмма C2 для Скоротителя ссылок."
+}
+
 component skorotitel.service "API_Components" {
     include *
     autoLayout
@@ -25,6 +31,17 @@ component skorotitel.kafka "Kafka_Components" {
     include *
     autoLayout
     description "Диаграмма C3 для Kafka."
+}
+
+deployment skorotitel "Development" "DevelopmentDeployment" {
+    include *
+    animation {
+        devEnv.devLaptop.devDocker.developerApiApplicationInstance
+         devEnv.devLaptop.devDbDocker.devDbServer.developerDatabaseInstance
+         devEnv.devLaptop.devKafkaDocker.developerKafkaInstance
+    }
+    autoLayout
+    description "An example development deployment scenario for the Internet Banking System."
 }
 
 //#this is only available on the Structurizr cloud service/on-premises installation/Lite
@@ -50,6 +67,7 @@ component skorotitel.kafka "Kafka_Components" {
 //        devEnv.devLaptop.devBrowser.developerSinglePageApplicationInstance
 //        devEnv.devLaptop.devDocker.devTomcat.developerWebApplicationInstance devEnv.devLaptop.devDocker.devTomcat.developerApiApplicationInstance
 //        devEnv.devLaptop.devDbDocker.devDbServer.developerDatabaseInstance
+
 //    }
 //    autoLayout
 //    description "An example development deployment scenario for the Internet Banking System."

@@ -1,24 +1,24 @@
-devLaptop = deploymentNode "Developer Laptop" "" "Microsoft Windows 10 or Apple macOS" {
-    devBrowser = deploymentNode "Web" "" "Chrome, Firefox, Safari, or Edge" {
-        developerSinglePageApplicationInstance = containerInstance internetBankingSystem.spa
-    }
-    
-    devDocker = deploymentNode "Docker Container - Web Server" "" "Docker" {
-        devTomcat = deploymentNode "Apache Tomcat" "" "Apache Tomcat 8.x" {
-            developerWebApplicationInstance = containerInstance internetBankingSystem.web
-            developerApiApplicationInstance = containerInstance internetBankingSystem.api
-        }
+devLaptop = deploymentNode "One Cloud" "" "Microsoft Windows 10 or Apple macOS" {
+        
+    devDocker = deploymentNode "Docker Container - Go Service" "" "Docker" {
+            developerApiApplicationInstance = containerInstance skorotitel.service
     }
     
     devDbDocker = deploymentNode "Docker Container - Database Server" "" "Docker" {
-        devDbServer = deploymentNode "Database Server" "" "Oracle 12c" {
-            developerDatabaseInstance = containerInstance internetBankingSystem.database
+        devDbServer = deploymentNode "Database Server" "" "ScyllaDB" {
+            developerDatabaseInstance = containerInstance skorotitel.dynamoDB
         }
+    }
+
+    devKafkaDocker = deploymentNode "Docker Container - Kafka_Components" "" "Docker" {
+
+            developerKafkaInstance = containerInstance skorotitel.kafka
+        
     }
 }
 
-deploymentNode "Big Bank plc" "" "Big Bank plc data center" "" {
-    deploymentNode "bigbank-dev001" "" "" "" {
-        softwareSystemInstance mainframe
-    }
-}
+// deploymentNode "Big Bank plc" "" "Big Bank plc data center" "" {
+//    deploymentNode "bigbank-dev001" "" "" "" {
+//        softwareSystemInstance mainframe
+//    }
+// }
