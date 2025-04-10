@@ -1,4 +1,4 @@
-# 1. Infrastructure
+# 3. Infrastructure
 
 Date: 2025-03-25
 
@@ -12,7 +12,9 @@ Accepted
 
 ## Decision
 
-Пришли к тому, что лучшим вариантом будет использование облака
+Пришли к тому, что лучшим вариантом будет использование облака.
+
+Процесс принятия решения описан [тут](https://docs.google.com/spreadsheets/d/1nW1SLHPjARKgHuI9rrKvrPxGDel4yFxqiHfSKq9Riyg/edit?gid=762734636#gid=762734636)
 
 ## Consequences
 

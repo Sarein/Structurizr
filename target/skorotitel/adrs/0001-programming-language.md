@@ -12,7 +12,7 @@ Accepted
 
 ## Decision
 
-Выбрали Go lang //добавить как пришли
+Выбрали Go lang. Процесс принятия решения [тут](https://docs.google.com/spreadsheets/d/1nW1SLHPjARKgHuI9rrKvrPxGDel4yFxqiHfSKq9Riyg/edit?gid=1614157703#gid=1614157703)
 
 ## Consequences
 
