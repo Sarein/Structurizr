@@ -37,11 +37,13 @@ deployment skorotitel "Development" "DevelopmentDeployment" {
     include *
     animation {
         devEnv.devLaptop.devDocker.developerApiApplicationInstance
-         devEnv.devLaptop.devDbDocker.devDbServer.developerDatabaseInstance
-         devEnv.devLaptop.devKafkaDocker.developerKafkaInstance
+        devEnv.devLaptop.devDbDocker.devDbServer.developerDatabaseInstance
+        devEnv.devLaptop.devKafkaDocker.developerKafkaInstance
+        devEnv.devGrafana.devPrometheusDocker.devPrometheusServer.developerPrometheusDatabaseInstance
+        devEnv.devGrafana.devGrafanaDocker.developerGrafanaInstance
     }
     autoLayout
-    description "An example development deployment scenario for the Internet Banking System."
+    description "deployment scenario for the skorotitel service."
 }
 
 //#this is only available on the Structurizr cloud service/on-premises installation/Lite

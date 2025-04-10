@@ -15,9 +15,18 @@ service = container "Skorotitel Service" "Содержит логику для �
 }
 web = container "Web" "Страница где пользователь может ввести свою ссылку и получить сокращенную" "" "Web"
 
+prometheus = container "Prometheus" "Система мониторинга" "" "Database"
+
+grafana = container "Grafana" "Система визуализации метрик" "" "Monitoring"
+
 kafka.kafkaConnect -> clickHouse "Автоматическая отправка батча со статистикой"
 service.redirectComponent -> dynamoDB "Получает полную ссылку"
 service.shortenComponent -> kafka "Складывает событие о сокращение ссылки"
 service.redirectComponent -> kafka "Складывает событие о переходе"
 service.shortenComponent -> dynamoDB "Складывает сокращенную сслку"
 web -> service.shortenComponent "Дергает ручку генерации ссылки" "AJAX"
+
+service.redirectComponent -> prometheus "Отправляет метрики о переходе"
+service.shortenComponent -> prometheus "Отправляет метрики о сокращении"
+
+grafana -> prometheus
