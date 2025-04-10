@@ -1,4 +1,4 @@
-devLaptop = deploymentNode "One Cloud" "" "Microsoft Windows 10 or Apple macOS" {
+devLaptop = deploymentNode "One Cloud" "" "Debian 12.10" {
         
     devDocker = deploymentNode "Docker Container - Go Service" "" "Docker" {
             developerApiApplicationInstance = containerInstance skorotitel.service
